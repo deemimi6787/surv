@@ -1,0 +1,44 @@
+<!doctype html>
+<html lanf="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MigoriHosp</title>
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Survey_P</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedConten">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+             </li>
+            
+             <li class="nav-item ">
+                <a class="nav-link" href="#">Report<span class="sr-only">(current)</span></a>
+             </li>
+             <li class="nav-item ">
+                <a class="nav-link" href="#">Total_Reports<span class="sr-only">(current)</span></a>
+             </li>
+            </ul>
+            <li class="form-inline my-2 my-lg-0" action="#" method="POST">
+                {% csrf_token %} 
+               <button class="btn btn-outline-secondary my-2 my-sm-0"><a href="{% url 'index' %}">Logout</a></button> 
+            </li>
+        </div>
+    </nav>
+
+
+        {% block content %}
+        {% endblock content %}  
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
+</body>
+</html>
