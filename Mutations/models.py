@@ -15,6 +15,7 @@ class Register(models.Model):
         return self.userName + ' | ' + self.password + ' | '
 
 class Mutation(models.Model):
+    emp = models.ForeignKey(Register, on_delete=models.CASCADE)
     county = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
     idNumber = models.CharField(max_length=100)
