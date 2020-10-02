@@ -6,27 +6,24 @@
     <title>Survey_P</title>
    {% load static %}
    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+   <link rel="stylesheet" href="{% static 'css/style.css'%}">
 </head>
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+    <div class="navbar-header"> 
         <a class="navbar-brand" href="#">Survey_P</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedConten">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-             <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+    </div>
+        <div>
+          <ul class="nav navbar-nav navbar-right">
+             <li>
+                <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
              </li>
             
-             <li class="nav-item ">
-                <a class="nav-link" href="#">Report<span class="sr-only">(current)</span></a>
-             </li>
-             <li class="nav-item ">
-                <a class="nav-link" href="#">Total_Reports<span class="sr-only">(current)</span></a>
+             <li>
+                <a class="nav-link" href="{% url 'entry' %}">Register Land<span class="sr-only">(current)</span></a>
              </li>
             </ul>
             <li class="form-inline my-2 my-lg-0" action="#" method="POST">
@@ -34,6 +31,11 @@
                <button class="btn btn-outline-secondary my-2 my-sm-0"><a href="{% url 'index' %}">Logout</a></button> 
             </li>
         </div>
+         <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  </div>
     </nav>
 
 

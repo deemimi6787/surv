@@ -3,10 +3,10 @@
 {% block content %}
 <form role="form" method="POST">
 {% csrf_token %}
-    <div class="form-group" style="padding:25%;">       
+    <div class="form-group" style="padding:25%; background:red;" >       
     <label for="name">Search</label>       
-    <input type="text" class="form-control" id="name" placeholder="Enter Search"> 
-    <button type="submit" class="btn btn-default">Submit</button>   
+    <input type="text" class="form-control" name='sname' id="name" placeholder="Enter Search"> 
+    <button type="submit" class="btn btn-default" style="margin: 10px 30px">Submit</button>   
     </div>
 </form>
 
